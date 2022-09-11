@@ -1,0 +1,334 @@
+/* Палітра кольорів */
+:root {
+	--primary-text-color: #757575;
+	--title-text-color: #212121;
+	--accent-color: #2196f3;
+	--primary-white: #fff;
+	--dark-background: #2f303a;
+	--light-background: #f5f4fa;
+	--logo-black: #000;
+	--contact-footer: rgb(255 255 255 / 0.6);
+	--hero-btn-active: #188ce8;
+	--header-border-color: #ececec;
+	--card-border-color: #eee;
+}
+
+/* Глобальні стилі */
+body {
+	font-family: "Roboto", sans-serif;
+	color: var(--primary-text-color);
+	background-color: var(--primary-white);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+}
+
+/* Скидання стилів*/
+.list {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.link {
+	text-decoration: none;
+}
+.img {
+	display: block;
+}
+
+/* Загальний допоміжний клас для центрування і обмеження контенту по ширині */
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	width: 1200px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+/* Клас для приховування заголовків, що відсутні на макеті */
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	border: 0;
+	clip: rect(0 0 0 0);
+}
+
+/* ХЕДЕР*/
+.header {
+	padding: 24px 0;
+	border-bottom: 1px solid var(--header-border-color);
+}
+.header .container {
+	display: flex;
+	align-items: center;
+}
+/* Стилі логотипу */
+.logo {
+	font-family: "Raleway", sans-serif;
+	font-weight: 700;
+	font-size: 26px;
+	line-height: 1.19;
+	letter-spacing: 0.03em;
+	text-decoration: none;
+	color: var(--logo-black);
+}
+.logo > .accent {
+	color: var(--accent-color);
+}
+/* Стилі навігації в хедері */
+.site-nav,
+.site-nav .list,
+.contact-nav {
+	display: flex;
+}
+.site-nav {
+	align-items: center;
+}
+.contact-nav {
+	margin-left: auto;
+}
+.site-nav .item + .item,
+.contact-nav .item + .item {
+	margin-left: 50px;
+}
+.logo + .list {
+	margin-left: 93px;
+}
+.site-nav .link,
+.contact-nav .link {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 1.14;
+	letter-spacing: 0.02em;
+}
+.site-nav .link {
+	color: var(--title-text-color);
+}
+.contact-nav .link {
+	color: var(--primary-text-color);
+}
+/* Колір при наведенні та фокуксі та колір поточної сторінки */
+.site-nav .link:hover,
+.site-nav .link:focus,
+.contact-nav .link:hover,
+.contact-nav .link:focus,
+.link.current {
+	color: var(--accent-color);
+}
+
+/* СЕКЦІЯ HERO */
+.hero {
+	padding: 200px 0;
+	text-align: center;
+	background-color: var(--dark-background);
+}
+.div-hero-title {
+	max-width: 696px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.hero-title {
+	margin-bottom: 30px;
+	font-weight: 900;
+	font-size: 44px;
+	line-height: 1.36;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--primary-white);
+}
+
+/* СТИЛІ КНОПОК
+.hero-btn - кнопка секції-герою, 
+.primary-btn - кнопки фільтру в портфоліо*/
+.hero-btn,
+.primary-btn {
+	font-size: 16px;
+	cursor: pointer;
+	border: none;
+	border-radius: 4px;
+}
+.hero-btn {
+	padding: 10px 32px;
+	min-width: 216px;
+	font-weight: 700;
+	line-height: 1.88;
+	letter-spacing: 0.06em;
+}
+.hero-btn:hover,
+.hero-btn:focus {
+	background-color: var(--hero-btn-active);
+}
+.primary-btn {
+	padding: 6px 22px;
+	min-width: 73px;
+	font-weight: 500;
+	line-height: 1.62;
+	letter-spacing: 0.03em;
+	color: var(--title-text-color);
+	background-color: var(--light-background);
+}
+.hero-btn,
+.primary-btn:hover,
+.primary-btn:focus {
+	color: var(--primary-white);
+	background-color: var(--accent-color);
+}
+
+/* СТИЛІ СЕКЦІЙ */
+/* Клас для секцій */
+.section {
+	padding-top: 94px;
+	padding-bottom: 94px;
+}
+
+.no-top-padding {
+	padding-top: 0;
+}
+
+/* Загальні стилі секцй */
+.section-title {
+	margin-bottom: 50px;
+	font-size: 36px;
+	line-height: 1.17;
+	text-align: center;
+}
+
+.section-title,
+.title {
+	color: var(--title-text-color);
+	letter-spacing: 0.03em;
+}
+
+.text {
+	letter-spacing: 0.03em;
+}
+
+/* СЕКЦЇЇ ГОЛОВНОЇ СТОРІНКИ */
+.advantages,
+.activities,
+.team-members {
+	display: flex;
+}
+
+.advantages .item + .item,
+.activities .item + .item,
+.team-members .item + .item {
+	margin-left: 30px;
+}
+
+/* Секція Наші переваги */
+.advantages .item {
+	width: 270px;
+}
+.advantages .title {
+	margin-bottom: 10px;
+	font-size: 14px;
+	line-height: 1.14;
+	text-transform: uppercase;
+}
+.advantages .text {
+	font-size: 14px;
+	line-height: 1.71;
+}
+
+/* Секція Наша команда */
+.team {
+	background-color: var(--light-background);
+}
+.team .title,
+.team .text {
+	font-size: 16px;
+	line-height: 1.19;
+}
+.team .title {
+	margin-bottom: 10px;
+	font-weight: 500;
+}
+.team-members .item {
+	background-color: var(--primary-white);
+	text-align: center;
+	border-radius: 0px 0px 4px 4px;
+}
+.team-card-info {
+	padding: 30px 0;
+}
+
+/* СЕКЦІЯ СТОРІНКИ ПОРТФОЛІО */
+/* Фільтр */
+.filter {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 50px;
+}
+.filter .item + .item {
+	margin-left: 8px;
+}
+/* Картки портфоліо */
+.portfolio {
+	display: flex;
+	flex-wrap: wrap;
+}
+.portfolio .item {
+	flex-basis: calc((100% - 60px) / 3);
+}
+.portfolio .item:not(:nth-child(3n)) {
+	margin-right: 30px;
+}
+.portfolio .item:not(:nth-last-child(-n + 3)) {
+	margin-bottom: 30px;
+}
+.portfolio .title {
+	margin-bottom: 4px;
+	font-size: 18px;
+	line-height: 2;
+	letter-spacing: 0.06em;
+}
+.portfolio .text {
+	font-size: 16px;
+	line-height: 1.88;
+	color: var(--primary-text-color);
+}
+.card-info {
+	padding: 20px 24px 19px;
+	border-right: 1px solid var(--card-border-color);
+	border-bottom: 1px solid var(--card-border-color);
+	border-left: 1px solid var(--card-border-color);
+}
+
+/* ФУТЕР */
+.footer {
+	background-color: var(--dark-background);
+	padding: 60px 0;
+}
+.footer .logo {
+	display: inline-block;
+	margin-bottom: 20px;
+	color: var(--primary-white);
+}
+.footer .item + .item {
+	margin-top: 9px;
+}
+.address .link {
+	font-size: 14px;
+	line-height: 1.71;
+	letter-spacing: 0.03em;
+	font-style: normal;
+	color: var(--contact-footer);
+}
+.address .fact-address {
+	color: var(--primary-white);
+}
+.address .link:hover,
+.address .link:focus {
+	color: var(--accent-color);
+}
